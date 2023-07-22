@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const axios = require("axios");
 const port = 8080;
 
 app.use(express.json())
+app.use(cors());
 
 var token = "";
 var trains = {};
