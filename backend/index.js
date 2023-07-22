@@ -46,16 +46,11 @@ const bodyParameters = {
          }).catch(console.log);
       }, interval);
  }).then(console.log(interval)).catch(console.log);
-//  setInterval(()=>{console.log(interval, token)}, 5000);
-//  console.log(interval);
 
 
-// console.log(token);
-
-// const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAwMDM4NjQsImNvbXBhbnlOYW1lIjoiVHJhaW5zIENoZWNrZXIiLCJjbGllbnRJRCI6IjRiMWVjOTFiLWRlNjEtNDU4Zi04MDNkLTM4NGJjZTRkZjY1ZCIsIm93bmVyTmFtZSI6IiIsIm93bmVyRW1haWwiOiIiLCJyb2xsTm8iOiIyMDAwMzIwMTMwMTM0In0.P19On02UCa_WfQoZ2Kn3IWAR9rlWZfOTezNHKbpFpII";
-
-  
-
+app.get('/trains', (req, res)=>{
+    res.json(trains);
+})
 
 app.listen(port, ()=>{
     console.log(`server running on port ${port}`);
